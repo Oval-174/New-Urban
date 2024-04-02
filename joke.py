@@ -6,5 +6,5 @@ age = current_year - year_of_birth
 age_help = age % 10
 if 10 < age < 15 : age_help = 0
 print("Здравствуйте, ", name, "!")
-if age < 5 : print("Хорошая шутка")
+if age < 5 : print("Хорошая  шутка")
 if age >4 : print("В этом году Вам ", age, text_for_answer[age_help])
