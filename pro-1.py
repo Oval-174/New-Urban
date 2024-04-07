@@ -51,7 +51,7 @@ while turn < 10:
         draw_area()
         turn_error = turn_error + 1
         if turn_error > 3:
-            print('Очень много ошибок! Объявляется ничья!')
+            print('Очень много ошибок!  Объявляется ничья!')
             break
         continue
     turn = turn + 1
