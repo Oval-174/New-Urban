@@ -1,6 +1,6 @@
 
 
-from nim_engine import get_bunches, put_stones, is_game_over, take_from_bunch
+from nim_engine_new import get_bunches, put_stones, is_game_over, take_from_bunch
 from termcolor import cprint, colored
 
 
@@ -9,10 +9,14 @@ user_number = 1
 while True:
     cprint('Текущая позиция', color="green")
     cprint(get_bunches(), color="green")
-    user_color = "blue" if user_number == 1 else "yellow"
-    cprint('Ход игрока {}'.format(user_number), color=user_color)
-    pos = input(colored('Откуда берем?', color=user_color))
-    qua = input(colored('Сколько берем?', color=user_color))
+    if user_number == 1:
+        cprint('Ход игрока {}'.format(user_number), color="blue")
+        pos = input(colored('Откуда берем?', color="blue"))
+        qua = input(colored('Сколько берем?', color="blue"))
+    else:
+        cprint('Ход игрока {}'.format(user_number), color="yellow")
+        pos = input(colored('Откуда берем?', color="yellow"))
+        qua = input(colored('Сколько берем?', color="yellow"))
     take_from_bunch(position=int(pos), quantity=int(qua))
     if is_game_over():
         break
