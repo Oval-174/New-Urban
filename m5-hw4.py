@@ -2,10 +2,15 @@ class Building:
     total_building = 0
     def __init__(self):
         Building.total_building += 1
-        print('Построено здание ', Building.total_building)
+        self.addr = ''
+    #    print('Построено здание ', self)
 
 
-new_building = Building()
-for i in range(1, 40):
-    new_building = Building()
-print('Всего построено зданий ', new_building.total_building)
+new_building = ['']
+for i in range(1, 41):
+    new_building.append(Building())
+for i in range(1, 41):
+    new_building[i] = Building()
+    print('Построено здание ', i, ' ', new_building[i])
+setattr(new_building[5], 'addr', 'Как войдешь в Африку - направо')
+print(new_building[5].addr)
