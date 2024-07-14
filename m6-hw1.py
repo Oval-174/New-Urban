@@ -5,6 +5,7 @@ class Car:
     def horse_powers(self):
         return "Unknown"
 
+
 class Nissan(Car):
     def __init__(self):
         super().__init__()
@@ -13,13 +14,16 @@ class Nissan(Car):
     def horse_powers(self):
         return 300
 
+
 class Kia(Car):
+
     def __init__(self):
         super().__init__()
         self.price = 1200000
 
     def horse_powers(self):
         return 250
+
 
 # Пример использования
 car1 = Car()
