@@ -43,7 +43,6 @@ p3 = Product('Potato', 5.5, 'Vegetables')
 print(p2)  # __str__
 
 s1.add(p1, p2, p3)
-
 print(s1.get_products())
 
 p4 = Product('Potato', 50.5, 'Vegetables')
@@ -53,5 +52,4 @@ p6 = Product('Potato', 5.5, 'Vegetables')
 print(p5)  # __str__
 
 s1.add(p4, p5, p6)
-
 print(s1.get_products())
