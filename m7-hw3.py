@@ -1,4 +1,4 @@
-# m7-hw1 "Найдёт везде"
+# m7-hw3 "Найдёт везде"
 
 class WordsFinder:
 
