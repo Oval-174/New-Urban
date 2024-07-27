@@ -1,4 +1,4 @@
-# m7-hw1 "Записать и запомнить"
+# m7-hw2 "Записать и запомнить"
 
 def custom_write(file_name, strings):
     file = open(file_name, 'w', encoding='utf-8')
