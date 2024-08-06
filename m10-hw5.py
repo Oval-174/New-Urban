@@ -1,12 +1,15 @@
 # m10-hw5 ''
-
+import random
 import threading
+import time
 
 class WarehouseManager:
     def __init__(self):
         self.data = {}
 
     def process_request(self, request):
+        time.sleep(10 * random.random())
+        print(request, self.data)
         product, action, quantity = request
         if action == "receipt":
             if product in self.data:
@@ -21,11 +24,12 @@ class WarehouseManager:
                     print(f"Error: Insufficient quantity of {product} for shipment")
             else:
                 print(f"Error: Product {product} not found for shipment")
+        print(request, self.data)
+        time.sleep(10 * random.random())
 
     def process_request_thread(self, request):
         thread = threading.Thread(target=self.process_request, args=(request,))
         thread.start()
-        thread.join()
 
     def run(self, requests):
         for request in requests:
@@ -47,4 +51,6 @@ requests = [
 manager.run(requests)
 
 # Выводим обновленные данные о складских запасах
-print(manager.data)
+while True:
+    print(f'Final: {manager.data}')
+    time.sleep(60)
