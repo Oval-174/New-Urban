@@ -1,5 +1,7 @@
-#m11-hw-2
+# m11-hw-2
 import inspect
+
+
 class Vehicle:
     __COLOR_VARIANTS = ('RED', 'BLUE', 'GREEN', 'BLACK', 'WHITE')
 
@@ -37,6 +39,7 @@ class Sedan(Vehicle):
 
     def p_limit(self):
         return self.__PASSENGERS_LIMIT
+
 
 def introspection_info(obj):
     methods = [func for func in dir(obj) if callable(getattr(obj, func))]
